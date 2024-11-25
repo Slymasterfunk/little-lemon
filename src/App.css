@@ -3,6 +3,7 @@
   --secondary-font: 'Markazi Text', serif;
   --primary-color: #495e57;
   --secondary-color: #f4ce14;
+  --tertiary-color: #ee9972;
 }
 
 * {
@@ -29,6 +30,10 @@
 .btn:hover {
   background-color: #d4b410;
   color: var(--primary-color);
+}
+
+.container {
+  padding: 50px;
 }
 
 /* Nav */
@@ -172,7 +177,6 @@ nav {
 .hero .container {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px;
 }
 
 .hero .left {
@@ -221,10 +225,6 @@ nav {
 }
 
 /* Specials */
-.specials .container {
-  padding: 50px;
-}
-
 .specials-header {
   display: flex;
   flex-direction: column;
@@ -290,7 +290,7 @@ nav {
   margin: 0;
   text-align: right;
   font-size: 16px;
-  color: #ee9972;
+  color: var(--tertiary-color);
   letter-spacing: 1px;
 }
 
@@ -315,4 +315,65 @@ nav {
   width: 20px;
   height: 20px;
   margin-left: 10px;
+}
+
+/* Reviews */
+.reviews {
+  background-color: var(--primary-color);
+}
+.reviews h1 {
+  font-size: 40px;
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.reviews-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 2rem;
+}
+
+.reviews-card {
+  width: 200px;
+  max-height: 180px;
+  background: #f5f5f5;
+  border-radius: 16px;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews-card .star {
+  margin: 5px 3px;
+  padding: 5px;
+  background: var(--secondary-color);
+  border-radius: 3px;
+}
+
+.reviews-card .fade {
+  opacity: 0.3;
+}
+
+.reviews-info {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.reviews-info-name h3 {
+  font-size: 16px;
+}
+
+.reviews-info-name p {
+  font-size: 12px;
+  color: var(--tertiary-color);
+}
+
+.reviews-description {
+  color: var(--primary-color);
+  font-size: 14px;
 }

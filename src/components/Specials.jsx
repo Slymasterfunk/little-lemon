@@ -1,5 +1,5 @@
 import Card from './Card'
-import menu from '../menu'
+import menu from '../data/menu'
 
 const Specials = () => {
   return (
