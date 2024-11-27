@@ -3,7 +3,7 @@ import about2 from '../assets/about2.jpg'
 
 const About = () => {
   return (
-    <section className='about'>
+    <section className='about' id='about'>
       <div className='container'>
         <div className='left'>
           <h1>Little Lemon</h1>

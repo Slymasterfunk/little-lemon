@@ -3,7 +3,7 @@ import menu from '../data/menu'
 
 const Specials = () => {
   return (
-    <section className='specials'>
+    <section className='specials' id='specials'>
       <div className='container'>
         <div className='specials-header'>
           <h1>This weeks specials</h1>

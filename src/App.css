@@ -10,6 +10,7 @@
   margin: 0 auto;
   padding: 0;
   max-width: 1440px;
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-family: var(--primary-font);
 }
@@ -322,7 +323,7 @@ nav {
   background-color: var(--primary-color);
 }
 .reviews h1 {
-  font-size: 40px;
+  font-size: 45px;
   font-family: var(--secondary-font);
   color: var(--secondary-color);
   letter-spacing: 1px;
@@ -379,6 +380,9 @@ nav {
 }
 
 /* About */
+.about {
+  min-height: 650px;
+}
 .about .container {
   display: flex;
   flex-wrap: wrap;
@@ -436,4 +440,47 @@ nav {
 .about .right :nth-child(2) {
   top: 0;
   right: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  display: flex;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+footer img {
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+footer h3 {
+  color: var(--secondary-color);
+  font-size: 23px;
+  font-weight: 800;
+  margin: 40px auto 10px;
+}
+
+footer .email,
+footer .phone {
+  margin-top: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.footer-social ul {
+  display: flex;
+  font-size: 30px;
 }

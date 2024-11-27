@@ -16,37 +16,43 @@ const Nav = () => {
       <div className={showMenu ? 'mobile-menu show' : 'mobile-menu'}>
         <ul>
           <li>
-            <a href='/home'>Home</a>
+            <a href='/'>Home</a>
           </li>
           <li>
-            <a href='#menu'>Menu</a>
+            <a href='#about'>About</a>
           </li>
           <li>
-            <a href='#reservations'>Reservations</a>
+            <a href='#specials'>Menu</a>
           </li>
           <li>
-            <a href='#order'>Order Online</a>
+            <a href=''>Reservations</a>
           </li>
           <li>
-            <a href='#login'>Login</a>
+            <a href=''>Order Online</a>
+          </li>
+          <li>
+            <a href=''>Login</a>
           </li>
         </ul>
       </div>
       <ul className='navbar-desktop'>
         <li>
-          <a href='/home'>Home</a>
+          <a href='/'>Home</a>
         </li>
         <li>
-          <a href='#menu'>Menu</a>
+          <a href='#about'>About</a>
         </li>
         <li>
-          <a href='#reservations'>Reservations</a>
+          <a href='#specials'>Menu</a>
         </li>
         <li>
-          <a href='#order'>Order Online</a>
+          <a href=''>Reservations</a>
         </li>
         <li>
-          <a href='#login'>Login</a>
+          <a href=''>Order Online</a>
+        </li>
+        <li>
+          <a href=''>Login</a>
         </li>
       </ul>
 
