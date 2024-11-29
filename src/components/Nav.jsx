@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { NavLink, useLocation } from 'react-router'
 import logo from '../assets/logo.svg'
 
 const Nav = () => {
@@ -8,51 +9,75 @@ const Nav = () => {
     setShowMenu((current) => !current)
   }
 
+  const location = useLocation()
+
+  useEffect(() => {
+    const sectionId = location.hash.replace('#', '') // Extract the section ID from the hash
+    if (sectionId) {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' }) // Scroll to the element smoothly
+      }
+    }
+  }, [location])
+
   return (
     <nav>
-      <a href='/'>
+      <NavLink to='/'>
         <img src={logo} alt='logo' />
-      </a>
+      </NavLink>
       <div className={showMenu ? 'mobile-menu show' : 'mobile-menu'}>
         <ul>
           <li>
-            <a href='/'>Home</a>
+            <NavLink to='/' onClick={menuHandler}>
+              Home
+            </NavLink>
           </li>
           <li>
-            <a href='#about'>About</a>
+            <NavLink to='/#about' onClick={menuHandler}>
+              About
+            </NavLink>
           </li>
           <li>
-            <a href='#specials'>Menu</a>
+            <NavLink to='/#specials' onClick={menuHandler}>
+              Menu
+            </NavLink>
           </li>
           <li>
-            <a href=''>Reservations</a>
+            <NavLink to='/ReservePage' onClick={menuHandler}>
+              Reservations
+            </NavLink>
           </li>
           <li>
-            <a href=''>Order Online</a>
+            <NavLink to='' onClick={menuHandler}>
+              Order Online
+            </NavLink>
           </li>
           <li>
-            <a href=''>Login</a>
+            <NavLink to='' onClick={menuHandler}>
+              Login
+            </NavLink>
           </li>
         </ul>
       </div>
       <ul className='navbar-desktop'>
         <li>
-          <a href='/'>Home</a>
+          <NavLink to='/'>Home</NavLink>
         </li>
         <li>
-          <a href='#about'>About</a>
+          <NavLink to='/#about'>About</NavLink>
         </li>
         <li>
-          <a href='#specials'>Menu</a>
+          <NavLink to='/#specials'>Menu</NavLink>
         </li>
         <li>
-          <a href=''>Reservations</a>
+          <NavLink to='/ReservePage'>Reservations</NavLink>
         </li>
         <li>
-          <a href=''>Order Online</a>
+          <NavLink to=''>Order Online</NavLink>
         </li>
         <li>
-          <a href=''>Login</a>
+          <NavLink to=''>Login</NavLink>
         </li>
       </ul>
 

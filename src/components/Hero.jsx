@@ -1,4 +1,5 @@
 import heroImg from '../assets/restauranfood.jpg'
+import { Link } from 'react-router'
 
 const Hero = () => {
   return (
@@ -11,9 +12,9 @@ const Hero = () => {
             We are a family owned Mediterranean resturant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <button href='/reservations' className='btn'>
+          <Link to='/ReservePage' className='btn'>
             Reserve a Table
-          </button>
+          </Link>
         </div>
         <div className='right'>
           <img src={heroImg} alt='food on stone' />
