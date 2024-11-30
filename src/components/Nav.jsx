@@ -51,12 +51,12 @@ const Nav = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to='' onClick={menuHandler}>
+            <NavLink to='/' onClick={menuHandler}>
               Order Online
             </NavLink>
           </li>
           <li>
-            <NavLink to='' onClick={menuHandler}>
+            <NavLink to='/' onClick={menuHandler}>
               Login
             </NavLink>
           </li>
