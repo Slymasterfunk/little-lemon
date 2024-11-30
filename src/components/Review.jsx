@@ -1,5 +1,9 @@
 import PropTypes from 'prop-types'
 import stars from '../assets/rating.svg'
+import avatar1 from '../assets/avatar1.jpg'
+import avatar2 from '../assets/avatar2.jpg'
+import avatar3 from '../assets/avatar3.jpg'
+import avatar4 from '../assets/avatar4.jpg'
 
 const Review = ({ review }) => {
   return (
@@ -16,7 +20,18 @@ const Review = ({ review }) => {
           ))}
         </div>
         <div className='reviews-info'>
-          <img src={review.img} alt='user' />
+          <img
+            src={
+              review.name === 'John'
+                ? avatar1
+                : review.name === 'Jane'
+                ? avatar2
+                : review.name === 'Terry'
+                ? avatar3
+                : avatar4
+            }
+            alt='user'
+          />
           <div className='reviews-info-name'>
             <h3>{review.name}</h3>
             <p>{review.reviews} reviews</p>
