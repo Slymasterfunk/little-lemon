@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router'
-import logo from '../assets/logo.svg'
+import logo from '../assets/Logo.svg'
 
 const Nav = () => {
   const [showMenu, setShowMenu] = useState(false)
