@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import logo from '../assets/logo_white.svg'
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
@@ -26,7 +27,7 @@ const Footer = () => {
           <h3>Get to know us</h3>
           <ul>
             <li>
-              <a href='#about'>About</a>
+              <Link to='/#about'>About</Link>
             </li>
             <li>
               <a href=''>Careers</a>

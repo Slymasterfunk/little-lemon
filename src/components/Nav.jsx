@@ -12,18 +12,20 @@ const Nav = () => {
   const location = useLocation()
 
   useEffect(() => {
-    const sectionId = location.hash.replace('#', '') // Extract the section ID from the hash
+    // Extract the section ID from the hash
+    const sectionId = location.hash.replace('#', '')
     if (sectionId) {
       const element = document.getElementById(sectionId)
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' }) // Scroll to the element smoothly
+        // Scroll to the element smoothly
+        element.scrollIntoView({ behavior: 'smooth' })
       }
     }
   }, [location])
 
   return (
     <nav>
-      <NavLink to='/'>
+      <NavLink className='img-container' to='/'>
         <img src={logo} alt='logo' />
       </NavLink>
       <div className={showMenu ? 'mobile-menu show' : 'mobile-menu'}>

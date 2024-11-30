@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import user from '../assets/user.svg'
 import stars from '../assets/rating.svg'
 
 const Review = ({ review }) => {
@@ -17,7 +16,7 @@ const Review = ({ review }) => {
           ))}
         </div>
         <div className='reviews-info'>
-          <img src={user} alt='user' />
+          <img src={review.img} alt='user' />
           <div className='reviews-info-name'>
             <h3>{review.name}</h3>
             <p>{review.reviews} reviews</p>
@@ -38,6 +37,7 @@ const Review = ({ review }) => {
 Review.propTypes = {
   review: PropTypes.shape({
     name: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
     rating: PropTypes.number.isRequired,
     reviews: PropTypes.number.isRequired,
     message: PropTypes.string.isRequired

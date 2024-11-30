@@ -40,18 +40,19 @@ const ReserveForm = () => {
     <div className='form-reserve'>
       <form onSubmit={handleSumbit}>
         <fieldset className='formField'>
-          <div>
-            <label htmlFor='reservation-name'>Name: </label>
+          <div className='form-item'>
+            <label htmlFor='reservation-name'></label>
             <input
               id='reservation-name'
               value={name}
               onChange={(e) => setName(e.target.value)}
               type='text'
+              placeholder='Name'
               required
             />
           </div>
-          <div>
-            <label htmlFor='reservation-date'>Choose Date:</label>
+          <div className='form-item'>
+            <label htmlFor='reservation-date'></label>
             <input
               id='reservation-date'
               value={date}
@@ -60,22 +61,25 @@ const ReserveForm = () => {
               required
             />
           </div>
-          <div>
-            <label htmlFor='reservation-time'>Choose Time:</label>
+          <div className='form-item'>
+            <label htmlFor='reservation-time'></label>
             <select
               id='reservation-time'
               value={time}
+              type='time'
               onChange={(e) => setTime(e.target.value)}
               required
             >
-              <option value=''>Select a Time</option>
+              <option className='placeholder' value=''>
+                Select a Time
+              </option>
               {availableTimes.map((availableTimes) => {
                 return <option key={availableTimes}>{availableTimes}</option>
               })}
             </select>
           </div>
-          <div>
-            <label htmlFor='reservation-guests'>Number of Guests:</label>
+          <div className='form-item'>
+            <label htmlFor='reservation-guests'></label>
             <input
               id='reservation-guests'
               min='1'
@@ -83,14 +87,14 @@ const ReserveForm = () => {
               onChange={(e) => {
                 setGuests(e.target.value)
               }}
-              type={'number'}
-              placeholder={0}
+              type='number'
+              placeholder='Number of Guests'
               max={10}
               required
             ></input>
           </div>
-          <div>
-            <label htmlFor='reservation-occasion'>Occasion:</label>
+          <div className='form-item'>
+            <label htmlFor='reservation-occasion'></label>
             <select
               id='reservation-occasion'
               key={occasion}
@@ -98,16 +102,17 @@ const ReserveForm = () => {
               onChange={(e) => setOccasion(e.target.value)}
               required
             >
-              <option value=''>Select an Option</option>
+              <option value=''>Occasion?</option>
               <option>Birthday</option>
               <option>Anniversary</option>
             </select>
           </div>
-          <div className='btnReceive'>
+          <div className='btn-container'>
             <input
+              className='btn'
               aria-label='On Click'
-              type={'submit'}
-              value={'Make Your Reservation'}
+              type='submit'
+              value={'Submit Reservation'}
             ></input>
           </div>
         </fieldset>

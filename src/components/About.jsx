@@ -1,5 +1,4 @@
-import about1 from '../assets/restaurant.jpg'
-import about2 from '../assets/about2.jpg'
+import about1 from '../assets/about_img.png'
 
 const About = () => {
   return (
@@ -16,7 +15,6 @@ const About = () => {
         </div>
         <div className='right'>
           <img src={about1} alt='resturant' />
-          <img src={about2} alt='mario and adrian' />
         </div>
       </div>
     </section>
